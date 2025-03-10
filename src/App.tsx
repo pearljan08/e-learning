@@ -5,6 +5,7 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from './pages/auth/Login'
 import ProtectedRoute from './components/ProtectedRoute';
+import SetPassword from './pages/auth/SetPassword';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,17 +14,18 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<ProtectedRoute />} />
+        <Route />
         <Route path="/auth">
           <Route index element={<Login />} />
+          <Route path="password" element={<SetPassword />} />
         </Route>
-        <Route path="/admin" element={<ProtectedRoute />} >
+        <Route path="/admin" >
 
         </Route>
-        <Route path="/professor" element={<ProtectedRoute />} >
+        <Route path="/professor">
 
         </Route>
-        <Route path="/student" element={<ProtectedRoute />} >
+        <Route path="/student" >
 
         </Route>
       </Routes>

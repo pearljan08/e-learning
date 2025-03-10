@@ -1,14 +1,6 @@
-import {
-    Card,
-    CardBody,
-    CardFooter,
-    Typography,
-    Button,
-    Input,
-    CardHeader,
-} from "@material-tailwind/react";
+import { Button, Card, CardBody, CardHeader, CardFooter, Input, Typography } from '@material-tailwind/react'
 
-const Login = () => {
+const SetPassword = () => {
   return (
     <>
       <div className="flex flex-col items-center justify-center min-h-screen min-w-screen bg-gray-900">
@@ -28,33 +20,25 @@ const Login = () => {
                 <div className="grid grid-rows-3">
                     <div className="mb-3">
                         <Typography variant="h4" color="blue-gray" className="mb-2 text-center">
-                            Login
+                            Set Password
                         </Typography>
                     </div>
                     <div className="mb-3">
-                        <Input label="Username"/>
+                        <Input label="New Password"/>
                     </div>
                     <div className="mb-3">
-                        <Input label="Password"/>
+                        <Input label="Confirm Password"/>
                     </div>
                 </div>
             </CardBody>
             <CardFooter className="pt-0 flex flex-col items-center">
-                <Button className="mb-2" fullWidth>Login</Button>
-                <Button
-                    variant="outlined"
-                    color="blue-gray"
-                    className="flex items-center gap-3"
-                    fullWidth
-                >
-                    <img src="https://docs.material-tailwind.com/icons/google.svg" alt="metamask" className="h-6 w-6" />
-                    Continue with Google
-                </Button>
+                <Button className="mb-2" fullWidth>Confirm</Button>
+                <Button variant="outlined" className="mb-2" fullWidth>Cancel</Button>
             </CardFooter>
         </Card>
       </div>
     </>
-  )
+  );
 }
 
-export default Login
+export default SetPassword
