@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from './pages/auth/Login'
 import ProtectedRoute from './components/ProtectedRoute';
 import SetPassword from './pages/auth/SetPassword';
+import Dashboard from './pages/student/Dashboard';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -26,7 +27,7 @@ function App() {
 
         </Route>
         <Route path="/student" >
-
+          <Route path="dashboard" element={<Dashboard/>} />
         </Route>
       </Routes>
     </BrowserRouter>
