@@ -1,9 +1,14 @@
-import { Carousel, Typography, Button } from "@material-tailwind/react";
+import { Carousel, Typography, Button, IconButton } from "@material-tailwind/react";
 
 const CarouselTransition = () => {
   return (
     <>
-        <Carousel transition={{ duration: 1 }}>
+        <Carousel 
+            transition={{ duration: 1 }}
+            prevArrow={( handlePrev )=>(
+                <IconButton />
+            )}    
+        >
             <div className="bg-[url('../eclipse.jpg')] bg-no-repeat lg:bg-contain bg-cover bg-right bg-linear-to-r from-cyan-500 to-blue-500">
                 <Typography
                     variant="small"
